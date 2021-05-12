@@ -1,0 +1,22 @@
+{
+    "name": "developer/delivery",
+    "description": "Site de Pedidos de Delivery",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Amorim",
+            "email": "amoriminformatica01@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php":">=7"
+    },
+    "autoload": {
+        "classmap": ["model","view","controller"],
+        "psr-4": {
+            "delivery\\":"/delivery"
+        }
+    }
+    
+}
