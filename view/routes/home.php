@@ -72,6 +72,13 @@ session_start();
         $controllerPromocao->getControllerCardapio();
         ?>
     </section>
+    <section id="bebidas">
+        <?php
+        include_once 'controller/controllerBebidas.php';
+        $controllerBebidas = new ControllerBebeidas();
+        $controllerBebidas->getControllerBebidas();
+        ?>
+    </section>
     <?php
 
     include_once 'view/routes/botton.php';
