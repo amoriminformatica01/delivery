@@ -22,11 +22,13 @@ class ControllerPromocao
             }
             echo "<div class='col-lg-4 col-sm-12 text-center'>";
             echo "<img class='border border-success  border-5 rounded-pill text-center'. src=" . "./view/img/" . utf8_decode($listaPromocao[$i]['imagem']) . " height=" . "300px" . "  " . "width=" . "300px" . ">";
-            echo "<h1 class='text-center text-success'>" . utf8_decode($listaPromocao[$i]['item']) . "</h1>";
-            echo "<p  class=' h1 text-secundary'>" . "R$" . " " . $listaPromocao[$i]['preco'] . "</p>";
+            echo "<h3 class='text-center text-dark'>" . utf8_decode($listaPromocao[$i]['item']) . "</h3>";
+            echo "<p  class=' h2 text-danger'>" . "R$" . " " . $listaPromocao[$i]['preco'] . "</p>";
+            echo "<a class='btn btn-success'>"."Comprar"."</a>";
             echo "</div>";
         }
-        echo '</div>';
-        echo '</div>';
+        
+        echo "</div>";
+        echo "</div>";
     }
 }

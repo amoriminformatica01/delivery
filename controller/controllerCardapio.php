@@ -19,9 +19,10 @@ class ControllerCardapio
             foreach ($listaCardapio[$i] as $key => $value) {
             }
             echo "<div class='col-lg-3 col-sm-6 text-center'>";
-            echo "<img class='border border-success  border-5  text-center'. src=" . "./view/img/" . utf8_decode($listaCardapio[$i]['imagem']) . " height=" . "200px" . "  " . "width=" . "200px" . ">";
-            echo "<h4 class='text-center text-text-success'>" . utf8_decode($listaCardapio[$i]['item']) . "</h4>";
-            echo "<p  class=' h5 text-secundary'>" . "Valor R$" . " " . $listaCardapio[$i]['preco'] . "</p>";
+            echo "<img class='border border-success  border-5  text-center'. src=" . "./view/img/" .(utf8_decode($listaCardapio[$i]['imagem'])) . " height=" . "200px" . "  " . "width=" . "200px" . ">";
+            echo "<h3 class='text-center text-dark'>" . utf8_decode($listaCardapio[$i]['item']) . "</h3>";
+            echo "<p  class='h2 text-danger'>" . "Valor R$" . " " . $listaCardapio[$i]['preco'] . "</p>";
+            echo "<a class='btn btn-success'>"."Comprar"."</a>";
             echo "</div>";
         }
         echo '</div>';

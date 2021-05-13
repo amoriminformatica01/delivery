@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding:0;
-    background-color:rgb(46, 94, 139);
+    background-color:rgb(238, 234, 234);
 }
 .navbar-toggler{
     background-color: white;
@@ -12,15 +12,15 @@ font-size:20px;
 font-family:Arial, Helvetica, sans-serif;
 }
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: white;
+    color: rgb(226, 137, 21);
 }
 .navbar-light .navbar-nav .nav-link {
-    color:mintcream;
+    color:rgb(255, 253, 245);
 }
 
 
 .navbar {
-    background-color:rgb(75, 71, 124);
+    background-color:rgb(204, 53, 26);
     font-family: Arial, sans-serif;
     color: rgb(131, 19, 19);
     font-size:20px;

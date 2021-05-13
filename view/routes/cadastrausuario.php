@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="form-group" action="" method="POST">
+                <form class="form-control" action="" method="POST">
                     <div class="row">
                         <div class="col-md-5 form-group">
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Insira seu Nome" required>
@@ -28,7 +28,7 @@
                             <input type="text" name="cep" id="cep" class="form-control" placeholder="Insira o seu Cep" required>
                         </div>
                         <div class="col-md-4 form-group">
-                            <input type="text" name="rua" id="rua" class="form-control" placeholder="Insira a sua Rua" required>
+                            <input type="text" name="rua" id="" class="form-control" placeholder="Insira a sua Rua" required>
                         </div>
                         <div class="col-md-3 form-group">
                             <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Insira o Seu Bairro" required>
@@ -62,6 +62,8 @@
 
 
         }
+
+        
 
         //Quando o campo cep perde o foco.
         $("#cep").blur(function() {

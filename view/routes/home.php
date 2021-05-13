@@ -16,15 +16,15 @@ session_start();
     <link rel="stylesheet" href="https://">
     <link rel="stylesheet" href="./view/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-   
+
+<body data-spy="on_click" data-target="close" data-offset="50">
 
     <section id="home">
-<?php
-    require 'view/routes/navbar.php';
-    ?>
+        <?php
+        require 'view/routes/navbar.php';
+        ?>
         <div class="container">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -54,7 +54,7 @@ session_start();
         <div class="container col-md-8">
             <div class="col-lg-12 col-sm-12">
                 <form class="d-flex">
-                    <input class="form-control me-2 label-success" type="search" placeholder="Buscar seu Produto desejavel..." aria-label="Search">
+                    <input class="form-control me-2 label-success text-center" type="search" placeholder="Buscar o Produto desejavel..." aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
@@ -72,23 +72,19 @@ session_start();
         $controllerPromocao->getControllerCardapio();
         ?>
     </section>
-    <section id="bebidas">
-        <?php
-        include_once 'controller/controllerBebidas.php';
-        $controllerBebidas = new ControllerBebeidas();
-        $controllerBebidas->getControllerBebidas();
-        ?>
-    </section>
     <?php
 
     include_once 'view/routes/botton.php';
     ?>
 
-
+    <script>
+        document.getElementById('#home').innerHTML = "nav-link active";
+    </script>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
