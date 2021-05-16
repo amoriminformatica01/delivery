@@ -1,13 +1,15 @@
 <?php
-include_once './vendor/autoload.php';
+
 
 class Cardapio extends Connect
 {
+    public  $conn;
+    private static $connect;
 
-    
-   public function VerCardapio()
+    public function VerCardapio()
     {
         try {
+            self::$connect = Connect::Connectar();
             $mostrar = array();
             $view = $this->conn->prepare("SELECT * FROM cardapio  ");
             $view->execute();
@@ -18,5 +20,3 @@ class Cardapio extends Connect
         }
     }
 }
-$cardapio = new Cardapio();
-$cardapio->VerCardapio();

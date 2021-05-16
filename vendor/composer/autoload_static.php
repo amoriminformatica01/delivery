@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita9e051224e489f7645fb626a26698aaa
+class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
 {
     public static $prefixLengthsPsr4 = array (
         'd' => 
@@ -27,22 +27,19 @@ class ComposerStaticInita9e051224e489f7645fb626a26698aaa
         'Connect' => __DIR__ . '/../..' . '/model/connect/connect.php',
         'ControllerCardapio' => __DIR__ . '/../..' . '/controller/controllerCardapio.php',
         'ControllerPromocao' => __DIR__ . '/../..' . '/controller/controllerPromocao.php',
+        'ControllerUser' => __DIR__ . '/../..' . '/controller/controllerUser.php',
         'Promocao' => __DIR__ . '/../..' . '/model/cardapio/promocao.php',
         'Url' => __DIR__ . '/../..' . '/controller/router.php',
-        'UserCreate' => __DIR__ . '/../..' . '/model/user/userCreate.php',
-        'UserDelete' => __DIR__ . '/../..' . '/model/user/userDelete.php',
-        'UserUpdate' => __DIR__ . '/../..' . '/model/user/userUpdate.php',
-        'UserView' => __DIR__ . '/../..' . '/model/user/userview.php',
-        'Userlogon' => __DIR__ . '/../..' . '/model/user/userLogon.php',
+        'Usuario' => __DIR__ . '/../..' . '/model/user/usuario.php',
         'ValidarLogin' => __DIR__ . '/../..' . '/controller/controllerLogin.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita9e051224e489f7645fb626a26698aaa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita9e051224e489f7645fb626a26698aaa::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita9e051224e489f7645fb626a26698aaa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$classMap;
 
         }, null, ClassLoader::class);
     }

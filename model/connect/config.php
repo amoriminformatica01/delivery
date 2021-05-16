@@ -1,14 +1,23 @@
 <?php
-include_once './vendor/autoload.php';
 class Config
 {
-    public static function gerarConfig()
+
+    protected static $host;
+    protected static $root;
+    protected static $db;
+    protected static $pass;
+    protected static $config;
+
+    public  function gerarConfig()
     {
-        define('HOST', 'locailhost');
-        define('ROOT', 'root');
-        define('PASS', '');
-        define('DB', 'eurodelivery');
+        self::$host = "localhost";
+       //return self::$host;
+        self::$root = "root";
+        //return self::$root;
+        self::$pass = "";
+        //return self::$pass;
+        self::$db = "eurodelivery";
+        //return self::$db;
     }
 }
-$config = new Config();
-$config->gerarConfig();
+

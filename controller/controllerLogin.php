@@ -1,7 +1,7 @@
 <?php
-class ValidarLogin
+class ValidarLogin 
 {
-    protected  $conn;
+
     function __construct()
     {
         if (isset($_POST['Validar'])) {
@@ -11,8 +11,8 @@ class ValidarLogin
                 $senha = addslashes($_POST['senha']);
                 $senha = md5($senha);
 
-                $query = new Userlogon();
-                $conn = $query->logon($email, $senha);
+                $query = new Usuario();
+                $conn = $query->logonUser($email, $senha);
 
                 if ($conn) {
 
@@ -23,6 +23,9 @@ class ValidarLogin
                     $_SESSION['cep'] = $conn['cep'];
                     $_SESSION['rua'] = $conn['rua'];
                     $_SESSION['cidade'] = $conn['cidade'];
+                    $_SESSION['item'] = $conn['item'];
+                    $_SESSION['valor'] = $conn['valor'];
+                    $_SESSION['quantidade'] = $conn['quantidade'];
                     
                     header("location:../view/routes/home.php");
                 } else {
@@ -33,4 +36,3 @@ class ValidarLogin
         }
     }
 }
-$ValidarLogin  = new ValidarLogin();

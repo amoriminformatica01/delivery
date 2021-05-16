@@ -1,3 +1,8 @@
+<?php
+
+
+
+?>
 <!-- Modal -->
 <div class="modal fade" id="cadastrausuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -7,9 +12,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="form-control" action="" method="POST">
+                <form class="form-control" action="./controller/controllerUser.php" method="POST">
                     <div class="row">
                         <div class="col-md-5 form-group">
+
+                            <?php
+                            $controllerUser = new ControllerUser();
+                            $controllerUser->insertUser();
+                            ?>
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Insira seu Nome" required>
                         </div>
                         <div class="col-md-7 form-group">
@@ -28,7 +38,7 @@
                             <input type="text" name="cep" id="cep" class="form-control" placeholder="Insira o seu Cep" required>
                         </div>
                         <div class="col-md-4 form-group">
-                            <input type="text" name="rua" id="" class="form-control" placeholder="Insira a sua Rua" required>
+                            <input type="text" name="rua" id="rua" class="form-control" placeholder="Insira a sua Rua" required>
                         </div>
                         <div class="col-md-3 form-group">
                             <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Insira o Seu Bairro" required>
@@ -43,7 +53,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <input type="submit" class="btn btn-primary" name="Cadastrar" id="Cadastrar" value="Cadastrar Usuario">
+                <input type="submit" class="btn btn-primary" name="Cadastrar" id="Cadastrar" value="Cadastrar">
                 </form>
             </div>
         </div>
@@ -63,7 +73,7 @@
 
         }
 
-        
+
 
         //Quando o campo cep perde o foco.
         $("#cep").blur(function() {

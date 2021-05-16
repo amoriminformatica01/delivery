@@ -151,10 +151,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 #localizacao {
-    padding-top: 50px;
+    padding-top: 10px;
     color: #fff;
 }
 
-.jumbotron {
-    background-image: url('./view/img/banner4.jpg');
-}

@@ -22,7 +22,8 @@ class ControllerCardapio
             echo "<img class='border border-success  border-5  text-center'. src=" . "./view/img/" .(utf8_decode($listaCardapio[$i]['imagem'])) . " height=" . "200px" . "  " . "width=" . "200px" . ">";
             echo "<h3 class='text-center text-dark'>" . utf8_decode($listaCardapio[$i]['item']) . "</h3>";
             echo "<p  class='h2 text-danger'>" . "Valor R$" . " " . $listaCardapio[$i]['preco'] . "</p>";
-            echo "<a class='btn btn-success'>"."Comprar"."</a>";
+            echo "<button class='btn btn-success' data-bs-toggle='modal'
+             data-bs-target='#comprar' data-bs-item=".$listaCardapio[$i]['item']."data-bs-preco=".$listaCardapio[$i]['preco'].">"."Adicionar ao carrinho"."</button>";
             echo "</div>";
         }
         echo '</div>';

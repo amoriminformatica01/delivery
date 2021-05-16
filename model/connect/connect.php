@@ -1,20 +1,17 @@
 <?php
-include_once './vendor/autoload.php';
 
 class Connect extends Config
 {
    public  $conn;
-
-
-
-   public  function __construct()
+   public  static $config;
+   public  function Connectar()
    {
-    
+
       try {
-         $this->conn = new PDO('mysql:dbname=' . DB . ';hostname=' . HOST, ROOT, PASS);
+         self::$config =  Config::gerarConfig();
+         $this->conn = new PDO('mysql:dbname=' . self::$db. ';hostname=' . self::$host, self::$root, self::$pass);
       } catch (PDOException $th) {
          echo "Erro no banco de dados" . $th->getMessage();
       }
    }
 }
-$connect = new Connect();

@@ -1,7 +1,5 @@
 <?php
 session_start();
-//include_once 'vendor/autoload.php';
-
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -19,7 +17,7 @@ session_start();
 
 </head>
 
-<body data-spy="on_click" data-target="close" data-offset="50">
+<body data-bs-spy="scroll" id="home" data-bs-target=".navbar" data-bs-offset="50">
 
     <section id="home">
         <?php
@@ -55,7 +53,7 @@ session_start();
             <div class="col-lg-12 col-sm-12">
                 <form class="d-flex">
                     <input class="form-control me-2 label-success text-center" type="search" placeholder="Buscar o Produto desejavel..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-lg btn-success" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
@@ -64,6 +62,7 @@ session_start();
         $controllerPromocao = new ControllerPromocao();
         $controllerPromocao->getControllerPromocao();
         ?>
+        
     </section>
     <section id="cardapio">
         <?php
@@ -76,7 +75,55 @@ session_start();
 
     include_once 'view/routes/botton.php';
     ?>
+    <div class="modal fade" id="comprar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" name="item" id="recipent">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control"name="preco" id="recipient"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        var exampleModal = document.getElementById('comprar')
+        exampleModal.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var item = button.getAttribute('data-bs-item')
+            var preco = button.getAttribute('data-bs-preco')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('.modal-title')
+            var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = 'Produto ' + item
+            modalBodyInput.value = item
+            modalBodyInput.value = preco
+        })
+    </script>
+    
+    
     <script>
         document.getElementById('#home').innerHTML = "nav-link active";
     </script>

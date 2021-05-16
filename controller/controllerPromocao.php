@@ -1,6 +1,5 @@
 <?php
-
-
+include_once './vendor/autoload.php';
 class ControllerPromocao
 {
 
@@ -24,7 +23,7 @@ class ControllerPromocao
             echo "<img class='border border-success  border-5 rounded-pill text-center'. src=" . "./view/img/" . utf8_decode($listaPromocao[$i]['imagem']) . " height=" . "300px" . "  " . "width=" . "300px" . ">";
             echo "<h3 class='text-center text-dark'>" . utf8_decode($listaPromocao[$i]['item']) . "</h3>";
             echo "<p  class=' h2 text-danger'>" . "R$" . " " . $listaPromocao[$i]['preco'] . "</p>";
-            echo "<a class='btn btn-success'>"."Comprar"."</a>";
+            echo "<button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#comprar'>"."Comprar"."</button>";
             echo "</div>";
         }
         
