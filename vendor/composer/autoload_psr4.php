@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'delivery\\' => array('/delivery'),
+    'Vendor\\namespace\\' => array($baseDir . '/'),
 );

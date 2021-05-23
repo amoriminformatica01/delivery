@@ -1,6 +1,6 @@
 {
     "name": "developer/delivery",
-    "description": "Site de Pedidos de Delivery",
+    "description": "Sistema de Pedidos de Delivery",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,8 @@
     "autoload": {
         "classmap": ["model","view","controller"],
         "psr-4": {
-            "delivery\\":"/delivery"
+            "delivery\\":"/delivery",
+            "Vendor\\namespace\\":""
         }
     }
     

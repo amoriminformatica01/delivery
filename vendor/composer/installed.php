@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '26c266cabd47590e26eda1929147a1bbf130db46',
+    'reference' => '5d7838291b8c116e469bd5fbdf84991a95e39ed4',
     'name' => 'developer/delivery',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '26c266cabd47590e26eda1929147a1bbf130db46',
+      'reference' => '5d7838291b8c116e469bd5fbdf84991a95e39ed4',
     ),
   ),
 );

@@ -1,5 +1,5 @@
 <?php
-
+//include_once '../vendor/autoload.php';
 
 
 ?>
@@ -16,10 +16,7 @@
                     <div class="row">
                         <div class="col-md-5 form-group">
 
-                            <?php
-                            $controllerUser = new ControllerUser();
-                            $controllerUser->insertUser();
-                            ?>
+                           
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Insira seu Nome" required>
                         </div>
                         <div class="col-md-7 form-group">
@@ -48,6 +45,9 @@
                         </div>
                         <div class="col-md-3 form-group">
                             <input type="text" name="uf" id="uf" class="form-control" placeholder="Uf" required>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <input type="text" name="data_de_cadastro" id="data_de_cadastro" class="form-control" placeholder="Data de Cadastro" required>
                         </div>
                     </div>
             </div>

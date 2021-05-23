@@ -1,7 +1,7 @@
 <?php
-class ValidarLogin 
+include_once './vendor/autoload.php';
+class ValidarLogin
 {
-
     function __construct()
     {
         if (isset($_POST['Validar'])) {
@@ -26,7 +26,7 @@ class ValidarLogin
                     $_SESSION['item'] = $conn['item'];
                     $_SESSION['valor'] = $conn['valor'];
                     $_SESSION['quantidade'] = $conn['quantidade'];
-                    
+
                     header("location:../view/routes/home.php");
                 } else {
                     header("location:..view/routes/home.php");

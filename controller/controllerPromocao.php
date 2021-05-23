@@ -1,9 +1,7 @@
 <?php
-include_once './vendor/autoload.php';
+//include_once './vendor/autoload.php';
 class ControllerPromocao
 {
-
-
     function getControllerPromocao()
     {
         echo '<h1 class="text-center text-success">Promoções do dia</h1>';

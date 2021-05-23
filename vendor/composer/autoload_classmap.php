@@ -15,6 +15,11 @@ return array(
     'ControllerUser' => $baseDir . '/controller/controllerUser.php',
     'Promocao' => $baseDir . '/model/cardapio/promocao.php',
     'Url' => $baseDir . '/controller/router.php',
-    'Usuario' => $baseDir . '/model/user/usuario.php',
+    'User' => $baseDir . '/model/user/UserInterface.php',
+    'UserCreate' => $baseDir . '/model/user/usercreate.php',
+    'UserDelete' => $baseDir . '/model/user/userdelete.php',
+    'UserLogon' => $baseDir . '/model/user/userlogon.php',
+    'UserUpdate' => $baseDir . '/model/user/userupdate.php',
+    'UserView' => $baseDir . '/model/user/userwiew.php',
     'ValidarLogin' => $baseDir . '/controller/controllerLogin.php',
 );

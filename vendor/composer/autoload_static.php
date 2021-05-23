@@ -11,12 +11,20 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         array (
             'delivery\\' => 9,
         ),
+        'V' => 
+        array (
+            'Vendor\\namespace\\' => 17,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'delivery\\' => 
         array (
             0 => '/delivery',
+        ),
+        'Vendor\\namespace\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
         ),
     );
 
@@ -30,7 +38,12 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'ControllerUser' => __DIR__ . '/../..' . '/controller/controllerUser.php',
         'Promocao' => __DIR__ . '/../..' . '/model/cardapio/promocao.php',
         'Url' => __DIR__ . '/../..' . '/controller/router.php',
-        'Usuario' => __DIR__ . '/../..' . '/model/user/usuario.php',
+        'User' => __DIR__ . '/../..' . '/model/user/UserInterface.php',
+        'UserCreate' => __DIR__ . '/../..' . '/model/user/usercreate.php',
+        'UserDelete' => __DIR__ . '/../..' . '/model/user/userdelete.php',
+        'UserLogon' => __DIR__ . '/../..' . '/model/user/userlogon.php',
+        'UserUpdate' => __DIR__ . '/../..' . '/model/user/userupdate.php',
+        'UserView' => __DIR__ . '/../..' . '/model/user/userwiew.php',
         'ValidarLogin' => __DIR__ . '/../..' . '/controller/controllerLogin.php',
     );
 
