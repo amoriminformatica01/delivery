@@ -1,7 +1,5 @@
 <?php
 //include_once '../vendor/autoload.php';
-
-
 ?>
 <!-- Modal -->
 <div class="modal fade" id="cadastrausuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -16,7 +14,7 @@
                     <div class="row">
                         <div class="col-md-5 form-group">
 
-                           
+
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Insira seu Nome" required>
                         </div>
                         <div class="col-md-7 form-group">
