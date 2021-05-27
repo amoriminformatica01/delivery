@@ -15,6 +15,22 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         array (
             'Vendor\\namespace\\' => 17,
         ),
+        'S' => 
+        array (
+            'Svg\\' => 4,
+        ),
+        'P' => 
+        array (
+            'PagSeguro\\' => 10,
+        ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
+        'D' => 
+        array (
+            'Dompdf\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -26,6 +42,32 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         array (
             0 => __DIR__ . '/../..' . '/',
         ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'PagSeguro\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pagseguro/pagseguro-php-sdk/source',
+        ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Sabberworm\\CSS' => 
+            array (
+                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -36,6 +78,12 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'ControllerCardapio' => __DIR__ . '/../..' . '/controller/controllerCardapio.php',
         'ControllerPromocao' => __DIR__ . '/../..' . '/controller/controllerPromocao.php',
         'ControllerUser' => __DIR__ . '/../..' . '/controller/controllerUser.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
+        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
+        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
+        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
+        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'Promocao' => __DIR__ . '/../..' . '/model/cardapio/promocao.php',
         'Url' => __DIR__ . '/../..' . '/controller/router.php',
         'User' => __DIR__ . '/../..' . '/model/user/UserInterface.php',
@@ -45,6 +93,7 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'UserUpdate' => __DIR__ . '/../..' . '/model/user/userupdate.php',
         'UserView' => __DIR__ . '/../..' . '/model/user/userwiew.php',
         'ValidarLogin' => __DIR__ . '/../..' . '/controller/controllerLogin.php',
+        'logoutAdmin' => __DIR__ . '/../..' . '/controller/controllerLogout.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -52,6 +101,7 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a::$classMap;
 
         }, null, ClassLoader::class);

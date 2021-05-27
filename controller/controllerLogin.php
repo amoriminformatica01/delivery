@@ -1,7 +1,10 @@
 <?php
-include_once './vendor/autoload.php';
-class ValidarLogin
+session_start();
+include_once '../vendor/autoload.php';
+class ValidarLogin extends UserCreate
 {
+    public $connect;
+    public $validarLogin;
     function __construct()
     {
         if (isset($_POST['Validar'])) {
@@ -10,12 +13,9 @@ class ValidarLogin
                 $email = addslashes($_POST['email']);
                 $senha = addslashes($_POST['senha']);
                 $senha = md5($senha);
-
-                $query = new Usuario();
-                $conn = $query->logonUser($email, $senha);
-
+                $query = UserCreate::logonUser($email, $senha);
+                $conn = $query;
                 if ($conn) {
-
                     $_SESSION['nome'] = $conn['nome'];
                     $_SESSION['sobre_nome'] = $conn['sobre_nome'];
                     $_SESSION['email'] = $conn['email'];
@@ -27,12 +27,13 @@ class ValidarLogin
                     $_SESSION['valor'] = $conn['valor'];
                     $_SESSION['quantidade'] = $conn['quantidade'];
 
-                    header("location:../view/routes/home.php");
+                    header("location:../");
                 } else {
-                    header("location:..view/routes/home.php");
+                    header("location:../");
                     $_SESSION["LogonError"] = "Usuario ou Senha não estão validos, favor rever os campos.";
                 }
             }
         }
     }
 }
+$validarLogin = new ValidarLogin();

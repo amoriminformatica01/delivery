@@ -4,7 +4,6 @@ class  UserCreate extends Connect
 {
     public  $conn;
     public  $connect;
-
     public  function viewUser($email)
     {
         try {
@@ -19,9 +18,19 @@ class  UserCreate extends Connect
             echo "Erro ao conectar o Banco Interno" . $th->getMessage();
         }
     }
+    public  function logonUser($email, $senha)
+    {
+        $this->connect = Connect::Connectar();
+        $sql = array();
+        $query = $this->conn->prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha LIMIT 1");
+        $query->bindValue(':email', $email);
+        $query->bindValue(':senha', $senha);
+        $query->execute();
+        $sql = $query->fetch(PDO::FETCH_ASSOC);
+        return $sql;
+    }
     public  function createUser($nome, $sobre_nome, $email, $senha, $telefone, $cep, $rua, $bairro, $cidade, $uf, $data_de_cadastro)
     {
-
         try {
             $this->connect = Connect::Connectar();
             $insert = $this->conn->prepare("INSERT INTO usuario (nome, sobre_nome, email, senha, telefone, cep, rua, bairro, cidade, uf, data_de_cadastro)

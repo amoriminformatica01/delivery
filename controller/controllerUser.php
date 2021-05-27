@@ -1,21 +1,18 @@
 <?php
-
+session_start();
 include_once '../vendor/autoload.php';
 class ControllerUser  extends UserCreate
 {
-    public   $connect;
-    public  $controllerUser;
-    public   function insertUser()
+    public $connect;
+    public $controllerUser;
+    public function insertUser()
     {
-        //método responsável na criação de usuário no banco de dados.
-
         if (isset($_POST['Cadastrar'])) {
-            $email = addslashes($_POST['email'])
-            ;
+            $email = addslashes($_POST['email']);
             $query = UserCreate::viewUser($email);
             $conn = $query;
             if ($conn) {
-                //header("location:../");
+                header("location:../#");
                 $_SESSION["userExist"] = "Usuário já existe!!!";
             } else {
                 $nome = addslashes($_POST['nome']);
@@ -30,7 +27,7 @@ class ControllerUser  extends UserCreate
                 $uf = addslashes($_POST['uf']);
                 $data_de_cadastro = addslashes($_POST['data_de_cadastro']);
                 $conn = UserCreate::createUser($nome, $sobre_nome, $email, $senha, $telefone, $cep, $rua, $bairro, $cidade, $uf, $data_de_cadastro);
-                //header("location:../");
+                header("location:../#");
                 $_SESSION["sucessUser"] = "Usuário cadastrado com sucesso!!!";
             }
         }

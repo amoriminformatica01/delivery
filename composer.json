@@ -10,7 +10,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php":">=7.3"
+        "php":">=7.0",
+        "pagseguro/pagseguro-php-sdk": "9999999-dev",
+        "dompdf/dompdf": "9999999-dev"
     },
     "autoload": {
         "classmap": ["model","view","controller"],

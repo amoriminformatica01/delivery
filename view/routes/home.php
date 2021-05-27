@@ -1,5 +1,14 @@
 <?php
+
+use PagSeguro\Domains\Requests\Authorization;
+use PagSeguro\Resources\Factory\Request\Parameter;
+use PagSeguro\Services\Application\Authorization as ApplicationAuthorization;
+
 session_start();
+include_once './vendor/autoload.php';
+
+
+
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -23,6 +32,65 @@ session_start();
         <?php
         require 'view/routes/navbar.php';
         ?>
+        <div class="container">
+    
+        </div>
+        <div class="text-center">
+                    <p class=" alert-success">
+                        <?php
+                        if (isset($_SESSION['sucessUser'])) {
+                            $_SESSION['sucessUser'];
+                            echo  $_SESSION['sucessUser'];
+                            unset($_SESSION['sucessUser']);
+                        }; ?>
+                    </p>
+                </div>
+
+
+
+                <p class=" alert-danger">
+                    <?php
+                    if (isset($_SESSION['LogonError'])) {
+                        $_SESSION['LogonError'];
+                        echo  $_SESSION['LogonError'];
+                        unset($_SESSION['LogonError']);
+                    }; ?>
+                </p>
+            </div>
+            <div class="text-center">
+                <p class=" alert-success">
+                    <?php
+                    if (isset($_SESSION['sairSucesso'])) {
+                        $_SESSION['sairSucesso'];
+                        echo  $_SESSION['sairSucesso'];
+                        unset($_SESSION['sairSucesso']);
+                    }; ?>
+                </p>
+            </div>
+
+            <div class="text-center">
+                <p class="alert-danger">
+                    <?php
+                    if (isset($_SESSION['Deslogado'])) {
+                        $_SESSION['Deslogado'];
+                        echo  $_SESSION['Deslogado'];
+                        unset($_SESSION['Deslogado']);
+                    }; ?>
+                </p>
+            </div>
+
+
+
+            <div class="text-center">
+                <p class="alert-success">
+                    <?php
+                    if (isset($_SESSION['USerExist'])) {
+                        $_SESSION['USerExist'];
+                        echo  $_SESSION['USerExist'];
+                        unset($_SESSION['userExist']);
+                    }; ?>
+                </p>
+            </div>
         <div class="container">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">

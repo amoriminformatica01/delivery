@@ -1,8 +1,7 @@
 <?php
 //require_once '../vendor/autoload.php';
- class UserView extends Connect
+class UserView extends Connect
 {
-
     public static $connect;
     public $conn;
     public  function viewUser($email)

@@ -1,15 +1,11 @@
 <?php
 //include_once '../vendor/autoload.php';
 class Config
-
 {
-
     public  $host;
     public  $root;
     public  $db;
     public  $pass;
-
-
     public  function gerarConfig()
     {
         $this->host = "localhost";
