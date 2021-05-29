@@ -10,11 +10,11 @@ class Config
     {
         $this->host = "localhost";
         //return $this->host;
-        $this->root = "eurodeli_admin";
+        $this->root = "root";
         //return$this->root;
-        $this->pass = "@Asj20508";
+        $this->pass = "";
         //return $this->pass;
-        $this->db = "eurodeli_eurodelivery";
+        $this->db = "eurodelivery";
         //return $this->$db;
     }
 }

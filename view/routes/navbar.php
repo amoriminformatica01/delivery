@@ -38,7 +38,8 @@ require 'view/routes/logarusuario.php';
                     } else {
                         echo "<button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#logarusuario'>" . "Entre" . "</button>";
                         echo "<button class='btn btn-link  text-light' data-bs-toggle='modal' data-bs-target='#cadastrausuario'>" . "Cadastre-se" . "</button>";
-                        echo "<button class='btn btn-outline-success iconify' data-bs-toggle='modal' data-bs-target='' data-icon='entypo:shopping-cart' data-inline='false' style='color: green;' data-width='80px' data-height='40px'>" . "</button>";
+                        echo "<button class='btn btn-outline-success iconify' data-bs-toggle='modal' data-bs-target='' data-icon='entypo:shopping-cart' data-inline='false' style='color: green;' data-width='80px' data-height='40px'>"."12"."<span class='badge bg-secondary'>"."12"."</button>";
+                        echo "<button type='button' class='btn btn-outline-success iconify'>"."<span class='badge bg-secondary'>"."0"."</span>"."</button>";
                     } ?>
                 </form>
         </div>

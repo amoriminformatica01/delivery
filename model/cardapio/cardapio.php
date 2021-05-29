@@ -1,5 +1,4 @@
 <?php
-//include_once './vendor/autoload.php';
 class Cardapio extends Connect
 {
     public  $conn;

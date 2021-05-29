@@ -1,8 +1,7 @@
 <?php
-//include_once './vendor/autoload.php';
 class ControllerPromocao
 {
-    function getControllerPromocao()
+    public static function getControllerPromocao()
     {
         echo '<h1 class="text-center text-success">Promoções do dia</h1>';
         echo '<div class="container">';
@@ -17,7 +16,7 @@ class ControllerPromocao
         for ($i = 0; $i < count($listaPromocao); $i++) {
             foreach ($listaPromocao[$i] as $key => $value) {
             }
-            echo "<div class='col-lg-4 col-sm-12 text-center'>";
+            echo "<div class='col-lg-4 col-md-6 my-3 col-sm-12 text-center'>";
             echo "<img class='border border-success  border-5 rounded-pill text-center'. src=" . "./view/img/" . utf8_decode($listaPromocao[$i]['imagem']) . " height=" . "300px" . "  " . "width=" . "300px" . ">";
             echo "<h3 class='text-center text-dark'>" . utf8_decode($listaPromocao[$i]['item']) . "</h3>";
             echo "<p  class=' h2 text-danger'>" . "R$" . " " . $listaPromocao[$i]['preco'] . "</p>";

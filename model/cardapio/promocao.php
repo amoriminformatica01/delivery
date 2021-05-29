@@ -1,6 +1,4 @@
 <?php
-//include_once './vendor/autoload.php';
-
 class Promocao extends Connect
 {
     public  $conn;

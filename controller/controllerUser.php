@@ -13,7 +13,7 @@ class ControllerUser  extends UserCreate
             $conn = $query;
             if ($conn) {
                 header("location:../#");
-                $_SESSION["userExist"] = "Usuário já existe!!!";
+                $_SESSION["USerExist"] = "Usuário já existe!!!";
             } else {
                 $nome = addslashes($_POST['nome']);
                 $sobre_nome = addslashes($_POST['sobre_nome']);
