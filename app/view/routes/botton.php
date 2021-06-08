@@ -26,6 +26,6 @@
         </div>
         <div class="footer-copyright">
             <p><?php echo date('Y');?> Batatas da Vanda </p>
-            <p><a href="http://developersolucoesweb.com.br/" target="blank__">Desenvolvido por <img src="./view/img/developerlogo.jpg" width="90px" height="30px" alt="logo developer"></a></p>
+            <p><a href="http://developersolucoesweb.com.br/" target="blank__">Desenvolvido por <img src=".app/view/img/developerlogo.jpg" width="90px" height="30px" alt="logo developer"></a></p>
         </div>
     </footer>

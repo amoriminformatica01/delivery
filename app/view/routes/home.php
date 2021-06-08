@@ -17,50 +17,12 @@ session_start();
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
 
     <section id="home">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#home"><img src="./app/view/img/logoBatatasDaVanda.png" height="60" width="140"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#promocoes">Promoções</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#cardapio">Cardapio</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#localizacao">Localização</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <p class="d-flex flex-grow p-2 bd-highlight">
-                    <?php
-                    if (isset($_SESSION['nome'])) {
-                        echo "<button class='btn  text-light'>" . "Bem vindo:" . $_SESSION['nome'] . "</button>";
-                        echo "<button class='btn btn-outline-success iconify'   data-icon='entypo:shopping-cart' data-inline='false' style='color: green;' data-width='80px' data-height='40px'>" . "</button>";
-                        echo "<a class='btn btn-link text-light' href='./app/controller/controllerLogout.php'>" . "Sair" . "</a>";
-                    } else {
-                        echo "<button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#logarusuario'>" . "Entre" . "</button>";
-                        echo "<button class='btn btn-link  text-light' data-bs-toggle='modal' data-bs-target='#cadastrausuario'>" . "Cadastre-se" . "</button>";
-                        echo "<button class='btn btn-outline-success iconify' data-toggle='modal369' data-bs-target='' data-icon='entypo:shopping-cart' data-inline='false' style='color: green;' data-width='80px' data-height='40px'>" . "12" . "<span class='badge bg-secondary'>" . "12" . "</button>";
-                        echo "<button type='button' class='btn btn-outline-success iconify'>" . "<span class='badge bg-secondary'>" . "0" . "</span>" . "</button>";
-                    } ?>
-                </p>
-            </div>
-
-        </nav>
+        <?php require './app/view/routes/navbar.php'; ?>
+        <?php require './app/view/routes/logarusuario.php'; ?>
+        <?php require './app/view/routes/cadastrausuario.php'; ?>
 
         <div class="text-center">
             <?php
@@ -109,11 +71,11 @@ session_start();
         </div>
 
         <div class="container my-1">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -126,13 +88,13 @@ session_start();
                         <img class="d-block w-100" src="./app/view/img/banner.png" alt="Third slide">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Anterior</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Proxímo</span>
+                    <span class="sr-only">Próximo</span>
                 </a>
             </div>
         </div>
@@ -187,32 +149,7 @@ session_start();
 
     include_once 'app/view/routes/botton.php';
     ?>
-    <div class="modal fade" id="logarusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Logar-se</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="form-control" action="./app/controller/controllerLogin.php" method="POST">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Insira seu Email" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="password" autocomplete="on" name="senha" class="form-control" placeholder="Insira sua Senha" required>
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <input type="submit" class="btn btn-primary" name="Validar" value="Validar">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="modal fade" id="produto" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -248,7 +185,7 @@ session_start();
                                     <div class="col-md-4">
                                         <label for="message-text" class="form-label">quantidade:</label>
                                         <div class="form-label" aria-live="polite">
-                                            <input class="form-control" type="number" onclick="somar()" name="quantidade" id="quantidade">
+                                            <input class="form-control" type="number" onblur="somar()" name="quantidade" id="quantidade">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -267,88 +204,9 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="modal fade" id="cadastrausuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cadastre-se</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="form-control" action="./app/controller/controllerUser.php" method="POST">
-                        <div class="row">
-                            <div class="col-md-5 form-group">
-                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Insira seu Nome" required>
-                            </div>
-                            <div class="col-md-7 form-group">
-                                <input type="text" name="sobre_nome" id="sobre_nome" class="form-control" placeholder="Insira seu Sobre Nome" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Insira seu Email" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="password" autocomplete="on" name="senha" id="senha" class="form-control" placeholder="Insira sua Senha" required>
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <input type="tel" name="telefone" id="telefone" class="form-control" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" placeholder="Insira seu Telefone" required>
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <input type="text" name="cep" id="cep" class="form-control" placeholder="Insira o seu Cep" required>
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <input type="text" name="rua" id="rua" class="form-control" placeholder="Insira a sua Rua" required>
-                            </div>
-                            <div class="col-md-3 form-group">
-                                <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Insira o Seu Bairro" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Insira o Sua Cidade" required>
-                            </div>
-                            <div class="col-md-3 form-group">
-                                <input type="text" name="uf" id="uf" class="form-control" placeholder="Uf" required>
-                            </div>
-                            <div class="col-md-3 form-group">
-                                <input type="hidden" name="data_de_cadastro" id="data_de_cadastro" class="form-control" placeholder="Data de Cadastro" required>
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <input type="submit" class="btn btn-primary" name="Cadastrar" id="Cadastrar" value="Cadastrar">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        function mask(o, f) {
-            setTimeout(function() {
-                var v = mphone(o.value);
-                if (v != o.value) {
-                    o.value = v;
-                }
-            }, 1);
-        }
 
-        function mphone(v) {
-            var r = v.replace(/\D/g, "");
-            r = r.replace(/^0/, "");
-            if (r.length > 10) {
-                r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
-            } else if (r.length > 5) {
-                r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-            } else if (r.length > 2) {
-                r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-            } else {
-                r = r.replace(/^(\d*)/, "($1");
-            }
-            return r;
-        }
-    </script>
 
-    <script>
 
-    </script>
     <script>
         var exampleModal = document.getElementById('produto')
         exampleModal.addEventListener('show.bs.modal', function(event) {
