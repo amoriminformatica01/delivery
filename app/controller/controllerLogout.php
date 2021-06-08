@@ -12,7 +12,7 @@ class logoutAdmin
             $_SESSION['sobre_nome'],
             $_SESSION['email']);
             $_SESSION['sairSucesso'] ="Deslogado com Sucesso!!!";
-           header("location:../");
+           header("location:../../");
         
     }
 }

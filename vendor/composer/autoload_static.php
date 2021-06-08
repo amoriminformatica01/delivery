@@ -22,6 +22,7 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'P' => 
         array (
             'PagSeguro\\' => 10,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'F' => 
         array (
@@ -50,6 +51,10 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         array (
             0 => __DIR__ . '/..' . '/pagseguro/pagseguro-php-sdk/source',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
@@ -71,29 +76,29 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
     );
 
     public static $classMap = array (
-        'Cardapio' => __DIR__ . '/../..' . '/model/cardapio/cardapio.php',
+        'Cardapio' => __DIR__ . '/../..' . '/app/model/cardapio/cardapio.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Config' => __DIR__ . '/../..' . '/model/connect/config.php',
-        'Connect' => __DIR__ . '/../..' . '/model/connect/connect.php',
-        'ControllerCardapio' => __DIR__ . '/../..' . '/controller/controllerCardapio.php',
-        'ControllerPromocao' => __DIR__ . '/../..' . '/controller/controllerPromocao.php',
-        'ControllerUser' => __DIR__ . '/../..' . '/controller/controllerUser.php',
+        'Config' => __DIR__ . '/../..' . '/app/model/connect/config.php',
+        'Connect' => __DIR__ . '/../..' . '/app/model/connect/connect.php',
+        'ControllerCardapio' => __DIR__ . '/../..' . '/app/controller/controllerCardapio.php',
+        'ControllerPromocao' => __DIR__ . '/../..' . '/app/controller/controllerPromocao.php',
+        'ControllerUser' => __DIR__ . '/../..' . '/app/controller/controllerUser.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
         'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
         'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
-        'Promocao' => __DIR__ . '/../..' . '/model/cardapio/promocao.php',
-        'Url' => __DIR__ . '/../..' . '/controller/router.php',
-        'User' => __DIR__ . '/../..' . '/model/user/UserInterface.php',
-        'UserCreate' => __DIR__ . '/../..' . '/model/user/usercreate.php',
-        'UserDelete' => __DIR__ . '/../..' . '/model/user/userdelete.php',
-        'UserLogon' => __DIR__ . '/../..' . '/model/user/userlogon.php',
-        'UserUpdate' => __DIR__ . '/../..' . '/model/user/userupdate.php',
-        'UserView' => __DIR__ . '/../..' . '/model/user/userwiew.php',
-        'ValidarLogin' => __DIR__ . '/../..' . '/controller/controllerLogin.php',
-        'logoutAdmin' => __DIR__ . '/../..' . '/controller/controllerLogout.php',
+        'Promocao' => __DIR__ . '/../..' . '/app/model/cardapio/promocao.php',
+        'Url' => __DIR__ . '/../..' . '/app/controller/router.php',
+        'User' => __DIR__ . '/../..' . '/app/model/user/UserInterface.php',
+        'UserCreate' => __DIR__ . '/../..' . '/app/model/user/usercreate.php',
+        'UserDelete' => __DIR__ . '/../..' . '/app/model/user/userdelete.php',
+        'UserLogon' => __DIR__ . '/../..' . '/app/model/user/userlogon.php',
+        'UserUpdate' => __DIR__ . '/../..' . '/app/model/user/userupdate.php',
+        'UserView' => __DIR__ . '/../..' . '/app/model/user/userwiew.php',
+        'ValidarLogin' => __DIR__ . '/../..' . '/app/controller/controllerLogin.php',
+        'logoutAdmin' => __DIR__ . '/../..' . '/app/controller/controllerLogout.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

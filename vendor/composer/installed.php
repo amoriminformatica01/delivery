@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4dd87e5a7180f5230d30aac6a525fff070b46de0',
+    'reference' => 'f29bfb1f79fd167d5fe78ecd077123c6d6c622ba',
     'name' => 'developer/delivery',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4dd87e5a7180f5230d30aac6a525fff070b46de0',
+      'reference' => 'f29bfb1f79fd167d5fe78ecd077123c6d6c622ba',
     ),
     'dompdf/dompdf' => 
     array (
@@ -28,7 +28,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '0ccafeb142dd04f556b43f1e8b5541aa06de1c26',
+      'reference' => '4c65810c797674d0ceb8918859c645f298b5e358',
     ),
     'pagseguro/pagseguro-php-sdk' => 
     array (
@@ -58,6 +58,16 @@
         0 => '0.3.x-dev',
       ),
       'reference' => '16fd4d717be18d8a604f2d0c3045b35aa2f6b0a5',
+    ),
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '453159e95bab83bad683ba7835265ef8f4f4ada7',
     ),
     'sabberworm/php-css-parser' => 
     array (

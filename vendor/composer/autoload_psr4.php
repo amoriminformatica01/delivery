@@ -10,6 +10,7 @@ return array(
     'Vendor\\namespace\\' => array($baseDir . '/'),
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src/Svg'),
     'PagSeguro\\' => array($vendorDir . '/pagseguro/pagseguro-php-sdk/source'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src/FontLib'),
     'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
 );

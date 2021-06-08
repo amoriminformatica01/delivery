@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../vendor/autoload.php';
+include_once '../../vendor/autoload.php';
 class ValidarLogin extends UserCreate
 {
     public $connect;
@@ -27,9 +27,9 @@ class ValidarLogin extends UserCreate
                     $_SESSION['valor'] = $conn['valor'];
                     $_SESSION['quantidade'] = $conn['quantidade'];
 
-                    header("location:../");
+                    header("location:../../");
                 } else {
-                    header("location:../");
+                    header("location:../../");
                     $_SESSION["LogonError"] = "Usuario ou Senha não estão validos, favor rever os campos.";
                 }
             }

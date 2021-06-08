@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+
  class UserLogon extends Connect
 {
 public static $connect;
@@ -14,9 +14,6 @@ public  $conn;
         $query->execute();
         $sql = $query->fetch(PDO::FETCH_ASSOC);
         return $sql;
-        header('./locatin:home.php');
+        header('../../');
     }
 }
-$userlogon = new UserLogon();
-$userlogon->logonUser('pedro','1234');
-var_dump($userlogon);

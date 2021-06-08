@@ -1,15 +1,14 @@
 <?php
-class Cardapio extends Connect
+class Promocao extends Connect
 {
     public  $conn;
-    private static $connect;
-
-    public function VerCardapio()
+    public  $connect;
+    public function VerPromocao()
     {
         try {
-            self::$connect = Connect::Connectar();
+            $this->connect = Connect::Connectar();
             $mostrar = array();
-            $view = $this->conn->prepare("SELECT * FROM cardapio  ");
+            $view = $this->conn->prepare("SELECT * FROM cardapio WHERE tipo='combo' LIMIT 14");
             $view->execute();
             $mostrar = $view->fetchAll(PDO::FETCH_ASSOC);
             return $mostrar;

@@ -10,16 +10,16 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php":">=7.0",
+        "php":">=7.3.0",
         "pagseguro/pagseguro-php-sdk": "9999999-dev",
-        "dompdf/dompdf": "9999999-dev"
+        "dompdf/dompdf": "9999999-dev",
+        "phpmailer/phpmailer": "9999999-dev"
     },
     "autoload": {
-        "classmap": ["model","view","controller"],
+        "classmap": ["app"],
         "psr-4": {
             "delivery\\":"/delivery",
             "Vendor\\namespace\\":""
         }
     }
-    
 }
