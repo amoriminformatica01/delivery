@@ -24,6 +24,7 @@ session_start();
         <?php require './app/view/routes/logarusuario.php'; ?>
         <?php require './app/view/routes/cadastrausuario.php'; ?>
 
+
         <div class="text-center">
             <?php
             if (isset($_SESSION['sucessUser'])) {
@@ -145,105 +146,15 @@ session_start();
 
                 ?>
     </section>
-    <?php
-
-    include_once 'app/view/routes/botton.php';
-    ?>
-
-
-    <div class="modal fade" id="produto" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModal">New message</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="col-md-10">
-                                    <img src="" class=" card-img-top" name="imagem" id="imagem" width="100px" height="200px">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="recipient-name" class="form-label">Item:</label>
-                                        <h1 class="form-control" name="item" id="item"></h1>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="message-text" class="form-label">Preço:</label>
-                                        <h1 class="form-control" name="preco" id="preco"></h1>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="message-text" class="form-label">Descrição:</label>
-                                        <h1 class="form-control" name="descricao" id="descricao"></h1>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="message-text" class="form-label">quantidade:</label>
-                                        <div class="form-label" aria-live="polite">
-                                            <input class="form-control" type="number" onblur="somar()" name="quantidade" id="quantidade">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="message-text" class="form-label">Total:</label>
-                                        <h1 class="form-control" name="total" id="total"></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Adicionar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php require './app/view/routes/produto.php'; ?>
+    <?php require './app/view/routes/bebida.php'; ?>
+    <?php require './app/view/routes/combo.php'; ?>
+    <?php include_once 'app/view/routes/botton.php'; ?>
 
 
-
-    <script>
-        var exampleModal = document.getElementById('produto')
-        exampleModal.addEventListener('show.bs.modal', function(event) {
-            // Button that triggered the modal
-            var button = event.relatedTarget
-            // Extract info from data-bs-* attributes
-            var id = button.getAttribute('data-bs-id')
-            var item = button.getAttribute('data-bs-item')
-            var preco = button.getAttribute('data-bs-preco')
-            var imagem = button.getAttribute('data-bs-imagem')
-            var descricao = button.getAttribute('data-bs-descricao')
-            var modalTitle = exampleModal.querySelector('.modal-title')
-            var modalBodyInputId = exampleModal.querySelector('#id')
-            var modalBodyInputItem = exampleModal.querySelector('#item')
-            var modalBodyInputPreco = exampleModal.querySelector('#preco')
-            var modalBodyInputImagem = exampleModal.querySelector('#imagem')
-            var modalBodyInputDescricao = exampleModal.querySelector('#descricao')
-            modalTitle.textContent = 'Produto ' + id
-            modalBodyInputItem.textContent = item
-            modalBodyInputPreco.textContent = preco
-            modalBodyInputImagem.src = imagem
-            modalBodyInputDescricao.textContent = descricao
-        })
-    </script>
-    <script>
-        function somar() {
-
-
-            var quantidade = Number(document.getElementById('#quantidade'))
-            var preco = Number(document.getElementById('#preco'))
-            var total = Number(parseInt(quantidade) * parseInt(preco))
-
-            document.querySelector('#total').innerHTML = total
-        }
-    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./app/view/js/events.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </body>
