@@ -19,7 +19,9 @@
         "classmap": ["app"],
         "psr-4": {
             "delivery\\":"/delivery",
-            "Vendor\\namespace\\":""
+            "vendor\\":[]
+            
+            
         }
     }
 }

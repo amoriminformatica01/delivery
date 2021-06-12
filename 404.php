@@ -9,12 +9,12 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="view/css/style.css">
+  <link rel="stylesheet" href="./app/view/css/style.css">
 </head>
 
 <body>
   <?php
-  //include_once './view//routes/navbar.php';
+  //include_once './app/view/routes/navbar.php';
   ?>
   <div class="container">
     <div class="jumbotron">
@@ -29,7 +29,7 @@
     <p class="text-center">Página não Encontrada</p>
   </div>
   <?php 
-include_once './view//routes/botton.php';
+include_once './app/view/routes/botton.php';
 ?>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

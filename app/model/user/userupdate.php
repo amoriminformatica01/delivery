@@ -1,5 +1,4 @@
 <?php
-
 abstract class UserUpdate extends Connect
 {
 

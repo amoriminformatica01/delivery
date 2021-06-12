@@ -21,7 +21,6 @@ return array(
     'HTML5_TreeBuilder' => $vendorDir . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
     'Promocao' => $baseDir . '/app/model/cardapio/promocao.php',
     'Url' => $baseDir . '/app/controller/router.php',
-    'User' => $baseDir . '/app/model/user/UserInterface.php',
     'UserCreate' => $baseDir . '/app/model/user/usercreate.php',
     'UserDelete' => $baseDir . '/app/model/user/userdelete.php',
     'UserLogon' => $baseDir . '/app/model/user/userlogon.php',

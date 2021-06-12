@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'delivery\\' => array('/delivery'),
-    'Vendor\\namespace\\' => array($baseDir . '/'),
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src/Svg'),
     'PagSeguro\\' => array($vendorDir . '/pagseguro/pagseguro-php-sdk/source'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),

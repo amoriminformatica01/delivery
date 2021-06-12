@@ -1,5 +1,4 @@
 <?php
-
  class UserLogon extends Connect
 {
 public static $connect;

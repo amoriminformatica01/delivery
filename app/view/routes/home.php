@@ -1,10 +1,8 @@
 <?php
 session_start();
-
 ?>
 <!doctype html>
 <html lang="pt-br">
-
 <head>
     <title>home</title>
     <!-- Required meta tags -->
@@ -14,7 +12,6 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="./app/view/css/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">

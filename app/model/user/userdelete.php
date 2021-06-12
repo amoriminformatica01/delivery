@@ -1,5 +1,4 @@
 <?php
-
 abstract class UserDelete extends Connect
 {
     public function deleteUser($id)

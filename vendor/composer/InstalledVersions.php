@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f29bfb1f79fd167d5fe78ecd077123c6d6c622ba',
+    'reference' => '55c2a5bed71de16cb9083caa8b2c1d73553c4933',
     'name' => 'developer/delivery',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f29bfb1f79fd167d5fe78ecd077123c6d6c622ba',
+      'reference' => '55c2a5bed71de16cb9083caa8b2c1d73553c4933',
     ),
     'dompdf/dompdf' => 
     array (

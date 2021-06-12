@@ -28,9 +28,9 @@
                                 <div class="col-md-10">
                                     <div class="row">
                                         <label for="Adicionar">Quantidade</label>
-                                        <button type="button" id="menos" onclick="quantidadeDecrementa();" class="btn btn-primary col-md-2 ">-</button>
+                                        <button type="button" id="menos"  onclick="quantidadeDecrementa();" class="btn btn-primary col-md-2 ">-</button>
                                         <div class="col-md-8 ">
-                                            <input type="number" class="form-control col-md-12" min="0" max="100"  name="quantidade" id="quantidade" disabled>
+                                            <input type="text" class="form-control col-md-12"  name="quantidade" id="quantidade" disabled>
                                         </div>
                                         <button type="button" id="mais" onclick="quantidadeIncrementa();" class="btn btn-primary col-md-2 ">+</button>
                                     </div>
@@ -49,7 +49,7 @@
                                         <label for="Adicionar">Adicionar queijo</label>
                                         <button type="button" id="menosQueijo" onclick="queijoDecrementa();" class="btn btn-primary col-md-2 ">-</button>
                                         <div class="col-md-8 ">
-                                            <input type="number"  class="form-control col-md-12" name="adcionalQueijo" id="adcionalQueijo" disabled>
+                                            <input type="text" class="form-control col-md-12" name="adcionalQueijo" id="adcionalQueijo" disabled>
                                         </div>
                                         <button type="button" id="maisQueijo" onclick="queijoIncrementa();" class="btn btn-primary col-md-2 ">+</button>
                                     </div>
@@ -59,7 +59,7 @@
                                         <label for="Adicionar">Adicionar presunto</label>
                                         <button type="button" class="btn btn-primary col-md-2">-</button>
                                         <div class="col-md-8">
-                                            <input type="number" class="form-control col-md-12" name="" id="">
+                                            <input type="number" class="form-control col-md-12" name="" id="" disabled>
                                         </div>
                                         <button type="button" class="btn btn-primary col-md-2">+</button>
                                     </div>
@@ -69,7 +69,7 @@
                                         <label for="Adicionar">Adicionar bacom</label>
                                         <button type="button" class="btn btn-primary col-md-2">-</button>
                                         <div class="col-md-8">
-                                            <input type="number" class="form-control col-md-12" name="" id="">
+                                            <input type="number" class="form-control col-md-12" name="" id="" disabled>
                                         </div>
                                         <button type="button" class="btn btn-primary col-md-2">+</button>
                                     </div>

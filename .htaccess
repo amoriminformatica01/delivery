@@ -15,4 +15,4 @@ Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L,R=301]
+RewriteRule ^(.*)$ index.php [L]

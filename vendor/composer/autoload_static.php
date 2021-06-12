@@ -11,10 +11,6 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         array (
             'delivery\\' => 9,
         ),
-        'V' => 
-        array (
-            'Vendor\\namespace\\' => 17,
-        ),
         'S' => 
         array (
             'Svg\\' => 4,
@@ -38,10 +34,6 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'delivery\\' => 
         array (
             0 => '/delivery',
-        ),
-        'Vendor\\namespace\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/',
         ),
         'Svg\\' => 
         array (
@@ -91,7 +83,6 @@ class ComposerStaticInitec9c3b46b6eb2f7a42de7efb3987a08a
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'Promocao' => __DIR__ . '/../..' . '/app/model/cardapio/promocao.php',
         'Url' => __DIR__ . '/../..' . '/app/controller/router.php',
-        'User' => __DIR__ . '/../..' . '/app/model/user/UserInterface.php',
         'UserCreate' => __DIR__ . '/../..' . '/app/model/user/usercreate.php',
         'UserDelete' => __DIR__ . '/../..' . '/app/model/user/userdelete.php',
         'UserLogon' => __DIR__ . '/../..' . '/app/model/user/userlogon.php',
